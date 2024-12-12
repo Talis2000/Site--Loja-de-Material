@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="imagens/icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSE SOLUÇÕES</title>
+    <link rel="stylesheet" href="css/Principal.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>GSE SOLUÇÕES</h1>
+            <nav class="nav-links">
+                <button onclick="location.href='Promoções.html'">Promoções</button>
+                
+                <!-- Catálogo com dropdown -->
+                <div class="dropdown">
+                    <button class="dropbtn">Catálogo</button>
+                    <div class="dropdown-content">
+                        <a href="Catalogo.html#materiais-eletricos">Materiais Elétricos</a>
+                        <a href="Catalogo.html#ferramentas">Ferramentas</a>
+                        <a href="Catalogo.html#tintas">Tintas</a>
+                    </div>
+                </div>
+    
+                <button onclick="window.open('https://www.instagram.com/gsesolucoeslza/', '_blank')">Instagram</button>
+                <button onclick="location.href='#SobreNos'">Sobre Nós</button>
+            </nav>
+    
+            <!-- Barra de pesquisa -->
+            <div class="search-container">
+                <input type="text" id="pesquisa" placeholder="Pesquisar produtos...">
+                <button onclick="filtrarProdutos()">Buscar</button>
+            </div>
+    
+            <!-- Botão de Login/Cadastro -->
+            <button class="login-btn" onclick="abrirModal()">Login</button>
+        </div>
+    </header>
+    
+    <!-- Modal -->
+<div id="modal" style="display:none;">
+    <div id="modal-content">
+        <button onclick="fecharModal()">Fechar</button>
+        
+        <!-- Formulário de Login -->
+        <div id="formulario-login" style="display:block;">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-senha" placeholder="Senha">
+            <button onclick="logar()">Entrar</button>
+            <p><a href="javascript:void(0);" onclick="mostrarCadastro()">Cadastrar-se</a></p>
+        </div>
+        
+        <!-- Formulário de Cadastro -->
+        <div id="formulario-cadastro" style="display:none;">
+            <h2>Cadastro</h2>
+            <input type="text" id="cadastro-nome" placeholder="Nome">
+            <input type="email" id="cadastro-email" placeholder="Email">
+            <input type="password" id="cadastro-senha" placeholder="Senha">
+            <select id="cadastro-tipo">
+                <option value="comum">Usuário Comum</option>
+                <option value="admin">Administrador</option>
+            </select>
+            <button onclick="cadastrar()">Cadastrar</button>
+            <p><a href="javascript:void(0);" onclick="mostrarLogin()">Já tem uma conta? Login</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Botão para abrir o modal -->
+<button onclick="abrirModal()">Login/Cadastro</button>
+
+<!-- Banner de Abertura -->
+<div class="hero-banner">
+    <img src="imagens/baner.jpg" alt="Materiais de Construção" class="banner-image">
+    <div class="banner-content">
+        <h2>Transforme seu projeto com os melhores materiais!</h2>
+        <p>Promoções especiais e qualidade garantida para sua obra.</p>
+        <a href="#Promocoes" class="btn-primary">Veja nossas ofertas</a>
+    </div>
+</div>
+
+<!-- Conteúdo Principal -->
+<div class="container">
+    <!-- Seção de Promoções -->
+    <section class="highlights" id="Promocoes">
+        <h2>Promoções e Destaques</h2>
+        <div class="product-category" id="promocoes-container"></div>
+    </section>
+
+    <!-- Produtos mais procurados -->
+    <section class="popular-products">
+        <h2>Produtos mais procurados</h2>
+        <div class="product-category" id="materiais-eletricos-container"></div>
+        <div class="product-category" id="ferramentas-container"></div>
+        <div class="product-category" id="tintas-container"></div>
+    </section>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    <h1 id="SobreNos">Sobre nós:</h1>
+    <p>Conheça a <strong>GSE Soluções</strong>, sua loja de materiais de construção confiável! Aberta diariamente das 8h às 18h, estamos sempre prontos para fornecer tudo o que você precisa para seus projetos, grandes ou pequenos.</p>
+    <p class="highlight">Nossa loja destaca-se por realizar muitas promoções incríveis, garantindo que nossos clientes sempre encontrem os melhores preços e ofertas para atender às suas necessidades.</p>
+    <p>Para mais informações ou dúvidas, entre em contato pelo número <strong><a href="https://api.whatsapp.com/send/?phone=5561998722375" target="_blank">61 9 98722375</a></strong>. Na GSE Soluções, sua satisfação é nossa prioridade! 🏠🔧</p>
+</footer>
+
+<!-- Inclusão do arquivo de script -->
+<script src="Loja.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+    {
+      "nome": "Selador acrílico e tinta P/Piso",
+      "preco": "R$139,90",
+      "imagem": "imagens/WhatsApp Image 2024-10-25 at 09.08.34 (1).jpeg",
+      "link": "Catalogo.html"
+    },
+    {
+      "nome": "Torneira com filtro",
+      "preco": "R$99,90",
+      "imagem": "imagens/WhatsApp Image 2024-10-25 at 09.08.42 (4).jpeg",
+      "link": "Catalogo.html"
+    },
+    {
+      "nome": "Tinta emborrachada P/Parede e Textura",
+      "preco": "R$129,90 e R$99,90",
+      "imagem": "imagens/WhatsApp Image 2024-10-25 at 09.08.34.jpeg",
+      "link": "Catalogo.html"
+    }
+  ]

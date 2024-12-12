@@ -1,0 +1,307 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Definindo uma cor base para o fundo */
+body {
+  background-color: #f0f8ff;
+  margin: 0;
+  padding-top: 60px; /* Ajusta o espaço após o cabeçalho fixo */
+}
+
+/* Cabeçalho fixo */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080; /* Alterando a cor de fundo do cabeçalho */
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px; /* Ajuste no espaçamento entre os botões */
+}
+
+.nav-links button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-links button:hover {
+  background-color: #005bb5;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Barra de pesquisa */
+.search-container {
+  display: flex;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.search-container button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #005bb5;
+}
+
+/* Conteúdo da página */
+.container {
+  padding: 20px;
+  margin-top: 80px; /* Espaço após o cabeçalho fixo */
+}
+
+.left {
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.image-container figure {
+  margin: 0;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #4682b4;
+  color: #fff;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo da área expandida do produto */
+.product-details {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex; /* Certifica-se de centralizar os itens */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.product-info {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-info img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.product-info h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-info p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.product-info button {
+  background-color: #4169e1;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.product-info button:hover {
+  background-color: #6495ed;
+}
+
+/* Estilo do botão "Fechar" */
+#close-details {
+  background-color: #dc3545;
+}
+
+#close-details:hover {
+  background-color: #ff5733;
+}
+
+/* Estilo do botão do carrinho */
+#cart-button {
+  padding: 10px;
+  background-color: #ff5722;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo do carrinho */
+.cart-container {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-item img {
+  max-width: 50px;
+  object-fit: contain;
+}
+
+.cart-item button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #ff5733;
+}
+
+/* Estilo do botão de fechar o carrinho */
+.cart-container button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-container button:hover {
+  background-color: #218838;
+}

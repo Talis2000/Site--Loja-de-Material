@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Cor de fundo suave */
+  color: #333;
+  margin-top: 200px; /* Ajuste o espaço para o cabeçalho fixo */
+}
+
+header {
+  position: fixed; /* Torna o cabeçalho fixo */
+  top: 0; /* Fixa no topo da página */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  background-color: #4169e1; /* Cor forte e harmoniosa */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionar sombra para destaque */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000; /* Coloca o cabeçalho acima de outros elementos */
+  padding: 10px 0; /* Adiciona um pouco de espaço ao redor */
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column; /* Organizar elementos verticalmente */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Garantir que se alinhe com o container */
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0; /* Espaçamento entre os botões e o título */
+  position: relative;
+}
+
+.nav-links li {
+  position: relative;
+  margin: 0;
+}
+
+.nav-links button {
+  text-decoration: none;
+  color: #fff; /* Melhor contraste */
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #6495ed; /* Cor consistente com o cabeçalho */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links button:hover {
+  background-color: #1e90ff; /* Tom mais escuro no hover */
+}
+
+.nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-links .dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-links .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.nav-links li:hover .dropdown-content {
+  display: block;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Espaçamento entre a barra de pesquisa e os botões */
+}
+
+.search-container input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #004494;
+}
+
+.container {
+  max-width: 1400px; /* Aumentado para 1400px */
+  margin: auto;
+  margin-top: 20px; /* Espaço extra abaixo do cabeçalho */
+  background: #ffffff; /* Fundo branco para destacar os produtos */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+h1 {
+  text-align: center;
+  color: #0056b3;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image-container figure {
+  margin: 10px;
+  text-align: center;
+  background-color: #f8f9fa; /* Fundo suave para imagens */
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.image-container img {
+  width: 220px; /* Aumentado para 220px */
+  height: 320px; /* Aumentado para 320px */
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.image-container figcaption {
+  text-align: center;
+  color: #333; /* Melhor contraste */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #4682b4; /* Cor consistente com o cabeçalho */
+  color: #fff;
+}

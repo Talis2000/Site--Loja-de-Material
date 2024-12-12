@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="imagens/icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSE SOLUÇÕES</title>
+    <link rel="stylesheet" href="css/Catalogo.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>GSE SOLUÇÕES</h1>
+            <nav class="nav-links">
+                <button onclick="location.href='loja.html'">Inicio</button>
+                <button onclick="window.open('https://www.instagram.com/gsesolucoeslza/', '_blank')">Instagram</button>
+                <button onclick="location.href='#SobreNos'">Sobre Nós</button>
+            </nav>
+    
+            <!-- Barra de pesquisa -->
+            <div class="search-container">
+                <input type="text" id="pesquisa" placeholder="Pesquisar produtos...">
+                <button onclick="filtrarProdutos()">Buscar</button>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="container">
+        <div class="left">
+            <h1>CATÁLOGO DE PRODUTOS</h1>
+
+            <!-- Seções divididas por categorias -->
+            <section id="promocoes">
+                <h2>Promoções</h2>
+                <div class="image-container" id="promocoes-container"></div>
+            </section>
+
+            <section id="materiais-eletricos">
+                <h2>Materiais Elétricos</h2>
+                <div class="image-container" id="materiais-eletricos-container"></div>
+            </section>
+
+            <section id="ferramentas">
+                <h2>Ferramentas</h2>
+                <div class="image-container" id="ferramentas-container"></div>
+            </section>
+
+            <section id="tintas">
+                <h2>Tintas e Revestimentos</h2>
+                <div class="image-container" id="tintas-container"></div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Área do produto expandido -->
+    <div id="product-details" class="product-details" style="display: none;">
+        <div class="product-info">
+            <img id="product-image" src="" alt="">
+            <div id="product-name"></div>
+            <div id="product-price"></div>
+            <div id="product-description"></div>
+            <button id="add-to-cart" onclick="adicionarCarrinho(produto)">Adicionar ao Carrinho</button>
+            <button id="close-details">Fechar</button>
+        </div>
+    </div>
+    
+
+    <footer>
+        <h1>Fale Conosco</h1>
+        <div class="nav-links">
+            <a href="https://www.instagram.com/gsesolucoeslza/" target="_blank">Instagram</a> 
+            <a href="https://api.whatsapp.com/send/?phone=5561998722375" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="js/Catalogo.js"></script> 
+</body>
+</html>
